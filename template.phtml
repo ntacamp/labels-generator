@@ -1,6 +1,9 @@
 <html>
 <meta charset="utf-8">
 <style type="text/css">
+body * {
+  font-family: 'Open Sans', sans-serif;
+}
 table {
   page-break-after:always;
   width: 100%;
@@ -31,8 +34,8 @@ div {
     <?php endif ?>
       <td>
         <div>
-          <h1><?php echo $topic->title ?> [<?php echo $topic->language ?>]</h1>
-          <h2><?php echo $topic->speaker ?></h2>
+          <h1><?php echo $topic->title ?></h1>
+          <h2><?php echo $topic->speaker ?> [<?php echo $topic->language ?>]</h2>
         </div>
       </td>
 <?php endforeach ?>
