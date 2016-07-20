@@ -45,7 +45,12 @@ function generate(array $topics)
     include __DIR__ . '/template.phtml';
 }
 
-$topics = load_topics(__DIR__ . "/dalyviai.csv");
+if (count($argv) < 2) {
+    echo "Usage: {$argv[0]} <file>" . PHP_EOL;
+    exit(1);
+}
+
+$topics = load_topics(__DIR__ . "/${argv[1]}");
 generate($topics);
 
 # vim: tabstop=4 shiftwidth=4
