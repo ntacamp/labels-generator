@@ -39,7 +39,7 @@ function load_topics($file)
     return $topics;
 }
 
-function generate(array $data)
+function generate(array $topics)
 {
     include __DIR__ . '/template.phtml';
 }

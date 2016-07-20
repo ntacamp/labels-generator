@@ -1,11 +1,17 @@
 <html>
+<meta charset="utf-8">
 <style type="text/css">
 .break {
-    page-break-after:always;
+  page-break-after:always;
 }
 </style>
 <body>
 
-
+<?php foreach ($topics as $i => $topic) : ?>
+<div <?php if ($i > 0 && 0 == $i % 8): ?>class="break"<?php endif; ?>>
+<h1><?php echo $topic->title ?></h1>
+<h2><?php echo $topic->speaker ?> [<?php echo $topic->language ?>]</h2>
+</div>
+<?php endforeach; ?>
 </body>
 </html>
