@@ -12,7 +12,7 @@ Script used to generate topic cards for No Trolls Allowed camp.
 ## Usage
 
 ```
-$ ./generate data.csv > data.html
+$ ./generate.php data.csv > data.html
 ```
 
 ## Requirements
@@ -22,5 +22,3 @@ $ ./generate data.csv > data.html
 ## Why PHP?
 
 ¯\\\_(ツ)_/¯. Ok it can be embeded into HTML directly. That is why.
-
-Ok, it supprot
