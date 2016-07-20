@@ -1,17 +1,40 @@
 <html>
 <meta charset="utf-8">
 <style type="text/css">
-.break {
+table {
   page-break-after:always;
+  width: 100%;
+}
+table td {
+  width: 50%;
+}
+div {
+  border: 0.1em solid black;
+  height: 11.7em;
+  padding: 0;
+  margin: 0;
+  text-align: center;
 }
 </style>
 <body>
-
 <?php foreach ($topics as $i => $topic) : ?>
-<div <?php if ($i > 0 && 0 == $i % 8): ?>class="break"<?php endif; ?>>
-<h1><?php echo $topic->title ?></h1>
-<h2><?php echo $topic->speaker ?> [<?php echo $topic->language ?>]</h2>
-</div>
-<?php endforeach; ?>
+  <?php if ($i == 0 || 0 == $i % 8) : ?>
+    <?php if ($i != 0) : ?>
+    </tr>
+  </table>
+    <?php endif ?>
+  <table>
+    <tr>
+  <?php endif ?>
+    <?php if (0 == $i % 2) : ?>
+    </tr><tr>
+    <?php endif ?>
+      <td>
+        <div>
+          <h1><?php echo $topic->title ?> [<?php echo $topic->language ?>]</h1>
+          <h2><?php echo $topic->speaker ?></h2>
+        </div>
+      </td>
+<?php endforeach ?>
 </body>
 </html>
